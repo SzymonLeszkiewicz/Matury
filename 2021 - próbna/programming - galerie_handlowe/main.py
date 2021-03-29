@@ -1,4 +1,10 @@
+# Szymon Leszkiewicz
+# szymon.leszkiewicz10@gmail.com
+def mark():
+    print("Szymon Leszkiewicz\nszymon.leszkiewicz10@gmail.com")
+    
 def pod1():
+    print("a)")
     with open('galerie.txt', 'r') as plik:
         kraje = {}
         for i in range(50):
@@ -10,9 +16,11 @@ def pod1():
 
         for i in kraje.items():
             print(i)
+    print('\n\n')
 
 
 def podb():
+    print("b)")
     with open('galerie.txt', 'r') as plik:
         miasta = {}
         for i in range(50):
@@ -32,9 +40,10 @@ def podb():
 
         for i in miasta.items():
             print(i)
-
+    print('\n\n')
 
 def podc():
+    print("c)")
     with open('galerie.txt', 'r') as plik:
         miasta = {}
         for i in range(10):
@@ -59,3 +68,10 @@ def podc():
 
         print(min, minm)
         print(max, maxm)
+    print()
+
+pod1()
+podb()
+podc()
+
+mark()
