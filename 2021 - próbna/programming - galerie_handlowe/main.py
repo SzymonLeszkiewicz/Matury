@@ -32,3 +32,30 @@ def podb():
 
         for i in miasta.items():
             print(i)
+
+
+def podc():
+    with open('galerie.txt', 'r') as plik:
+        miasta = {}
+        for i in range(10):
+            dane = plik.readline().split()
+            miasto = dane[1]
+            dane = list(map(int, dane[2::]))
+            pow = []
+            for x in range(0, len(dane), 2):
+                if dane[x] == 0:
+                    break
+                pow.append(dane[x] * dane[x + 1])
+            miasta[miasto] = len(set(pow))
+        minm, min = 0, 9999
+        maxm, max = 0, 0
+        for i in miasta.items():
+            if i[1] < min:
+                min = i[1]
+                minm = i[0]
+            if i[1] > max:
+                max = i[1]
+                maxm = i[0]
+
+        print(min, minm)
+        print(max, maxm)
