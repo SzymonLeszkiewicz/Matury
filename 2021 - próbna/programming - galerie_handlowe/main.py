@@ -2,7 +2,8 @@
 # szymon.leszkiewicz10@gmail.com
 def mark():
     print("Szymon Leszkiewicz\nszymon.leszkiewicz10@gmail.com")
-    
+
+
 def pod1():
     print("a)")
     with open('galerie.txt', 'r') as plik:
@@ -21,9 +22,9 @@ def pod1():
 
 def podb():
     print("b)")
-    with open('galerie.txt', 'r') as plik:
+    with open('galerie_przyklad.txt', 'r') as plik:
         miasta = {}
-        for i in range(50):
+        for i in range(10):
             dane = plik.readline().split()
             # print('test ',dane)
             miasto = dane[1]
@@ -40,7 +41,20 @@ def podb():
 
         for i in miasta.items():
             print(i)
+    minm, min = 0, 9999
+    maxm, max = 0, 0
+    for i in miasta.items():
+        if i[1][0] < min:
+            min = i[1][0]
+            minm = i[0]
+        if i[1][0] > max:
+            max = i[1][0]
+            maxm = i[0]
     print('\n\n')
+    print('min', min, minm)
+    print('max',max, maxm)
+    print('\n\n')
+
 
 def podc():
     print("c)")
@@ -69,6 +83,7 @@ def podc():
         print(min, minm)
         print(max, maxm)
     print()
+
 
 pod1()
 podb()
