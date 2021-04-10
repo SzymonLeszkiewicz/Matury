@@ -22,7 +22,7 @@ def czy_pierwsza(x):
     if x % 2 == 0 and x != 2:
         return False
 
-    for i in range(3, ceil(sqrt(x)), 2):
+    for i in range(3, ceil(sqrt(x)) + 1, 2):
         if x % i == 0:
             return False
     return True
