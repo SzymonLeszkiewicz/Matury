@@ -1,3 +1,11 @@
+# Szymon Leszkiewicz
+# szymon.leszkiewicz10@gmail.com
+
+def mark():
+    print('\n\n')
+    print("Szymon Leszkiewicz\nszymon.leszkiewicz10@gmail.com")
+
+
 def bintodec(x):
     suma = 0
     potega = 1
@@ -43,3 +51,32 @@ def podb():
         with open("odp.txt", 'a') as odp:
             odp.write(f'b):\n')
             odp.write(f'{licznik}\n')
+
+
+def ilezer(x):
+    '''liczymy jaki jest najdl nieprzerwany ciag zer'''
+    dlu = x.split('1')
+    lista = list(map(len, dlu))
+    return max(lista)
+
+
+def podc():
+    with open("slowa.txt") as plik:
+        with open("odp.txt", 'a') as odp:
+            odp.write(f'c):\n')
+            x = plik.read().split()
+            naj = 0
+            for i in x:
+                if naj < ilezer(i):
+                    naj = ilezer(i)
+            licznik = 0
+            for i in x:
+                if naj == ilezer(i):
+                    odp.write(f'{i}\n')
+            odp.write(f'{naj}\n')
+
+
+poda()
+podb()
+podc()
+mark()
