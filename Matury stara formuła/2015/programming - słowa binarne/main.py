@@ -31,3 +31,15 @@ def blok(x):
         elif x[i] != x[i + 1] and czy_przejscie == True:
             return False
     return czy_przejscie
+
+
+def podb():
+    with open("slowa.txt") as plik:
+        x = plik.read().split()
+        licznik = 0
+        for i in x:
+            if blok(i):
+                licznik += 1
+        with open("odp.txt", 'a') as odp:
+            odp.write(f'b):\n')
+            odp.write(f'{licznik}\n')
