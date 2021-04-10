@@ -22,9 +22,9 @@ def pod1():
 
 def podb():
     print("b)")
-    with open('galerie_przyklad.txt', 'r') as plik:
+    with open('galerie.txt', 'r') as plik:
         miasta = {}
-        for i in range(10):
+        for i in range(50):
             dane = plik.readline().split()
             # print('test ',dane)
             miasto = dane[1]
@@ -60,7 +60,7 @@ def podc():
     print("c)")
     with open('galerie.txt', 'r') as plik:
         miasta = {}
-        for i in range(10):
+        for i in range(50):
             dane = plik.readline().split()
             miasto = dane[1]
             dane = list(map(int, dane[2::]))
